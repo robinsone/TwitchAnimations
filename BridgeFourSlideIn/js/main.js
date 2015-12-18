@@ -1,7 +1,7 @@
 $(document).ready(function() {
     function showpanel() {
         $("#alertwidth").attr('class', 'animated slideOutRight');
-		setTimeout(hidepanel, 90000) //Time betweeen showing it
+		setTimeout(hidepanel, 900000) //Time betweeen showing it
     }
 	
 	function hidepanel() {
