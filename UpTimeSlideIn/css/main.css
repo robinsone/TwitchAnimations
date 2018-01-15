@@ -110,7 +110,7 @@ textarea {
     margin-top: 100px;
     width: 500px;
     background-color: #4D308C;
-    float: Left;
+    float: Right;
 }
 
 .image {
@@ -149,43 +149,7 @@ textarea {
 }
 
 
-.innerSlideOut {
-    color: #f1f1f1;
-    text-align: center;
-    background-image: url('../img/SlideOutInvert.png');
-    background-repeat: no-repeat;
-    height: 443px;
-    width: 303px;
-    padding: 130px 0px 0px 0px;
-    font-family: oswald;
-}
 
-.innerSlideOut.division{
-    background-image: url('../img/SlideOutInvert_Division.png') !important;
-}
-
-.innerSlideOut p {
-    padding: 0px !important;
-    margin: 0 auto;
-    
-}
-
-.innerSlideOut .name {
-/*    font-family: 'Inconsolata', ;*/
-    font-weight: 900;
-    text-transform: uppercase;
-    font-size: 1.8em;
-    max-width: 280px;
-    height: auto;
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    overflow: hidden;
-}
-
-.innerSlideOut .padding {
-    margin-top: -8px;
-    margin-bottom: 6px;
-}
 
 
 
