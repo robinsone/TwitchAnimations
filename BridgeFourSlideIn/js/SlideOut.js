@@ -3,6 +3,7 @@ $(document).ready(function () {
         GetFollower();
         GetTopDonation();
         GetLatestDonation();
+        GetLatestSub();
         // $('#Follower').html(follower);
         
         // jQuery.get('TA/most_recent_donator.txt', function (data) {
@@ -27,6 +28,12 @@ $(document).ready(function () {
         });
     }
 
+    function GetLatestSub() {
+        $.getJSON('https://api.twitch.tv/kraken/channels/judgementally/subscriptions?oauth_token=1k1al739w8vh3axxlatpmgt8f6rpgl&limit=1&direction=desc').done(function(data) {
+            $('#NewestSub').html(data.subscriptions["0"].user.display_name);
+        });
+    }
+
     function GetTopDonation() {
         $.ajax({
             url: 'https://api.streamelements.com/kappa/v2/tips/5a5d2bee6f08520001e45a29/top',
@@ -36,7 +43,7 @@ $(document).ready(function () {
                 "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWE1ZDJiZWU2ZjA4NTIwMDAxZTQ1YTI4IiwiY2hhbm5lbCI6IjVhNWQyYmVlNmYwODUyMDAwMWU0NWEyOSIsInByb3ZpZGVyIjoidHdpdGNoIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNTE2MDU1NTM0LCJpc3MiOiJTdHJlYW1FbGVtZW50cyIsImp0aSI6IjhjNmU5ZjJlLTJjOWQtNDQ2ZS04MGQ3LWQ1ODQyMDJiOTgwZCJ9.gFODwIECeYa-G5hguFhC0Rwn0MTQY8D1noc81K9jpOs"
             },
             success: function(data) {
-                 $('#TopDonation').html(data["0"].username + " $" + data["0"].total); 
+                 $('#TopDonation').html(data["0"].username); 
             },
             error: function() {}
           });
@@ -51,7 +58,7 @@ $(document).ready(function () {
                 "Authorization": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyIjoiNWE1ZDJiZWU2ZjA4NTIwMDAxZTQ1YTI4IiwiY2hhbm5lbCI6IjVhNWQyYmVlNmYwODUyMDAwMWU0NWEyOSIsInByb3ZpZGVyIjoidHdpdGNoIiwicm9sZSI6Im93bmVyIiwiaWF0IjoxNTE2MDU1NTM0LCJpc3MiOiJTdHJlYW1FbGVtZW50cyIsImp0aSI6IjhjNmU5ZjJlLTJjOWQtNDQ2ZS04MGQ3LWQ1ODQyMDJiOTgwZCJ9.gFODwIECeYa-G5hguFhC0Rwn0MTQY8D1noc81K9jpOs"
             },
             success: function(data) {
-                 $('#Donation').html(data.docs["0"].donation.user.username + " $" + data.docs["0"].donation.amount); 
+                 $('#Donation').html(data.docs["0"].donation.user.username); 
             },
             error: function() {}
           });

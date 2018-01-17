@@ -12,7 +12,7 @@
 
 html {
     color: #222;
-    font-size: 1em;
+    font-size: 1.3em;
     line-height: 1.4;
     font-family: 'Oswald', sans-serif;
 }
@@ -144,7 +144,7 @@ textarea {
 .text {
     padding: 10px;
     
-    font-size: 25px;
+    font-size: 28px;
     color: #f1f1f1;
     margin-top: -22px;
 }
@@ -157,12 +157,16 @@ textarea {
     background-repeat: no-repeat;
     height: 443px;
     width: 303px;
-    padding: 130px 0px 0px 0px;
+    padding: 120px 0px 0px 0px;
     
 }
 
 .innerSlideOut.division{
     background-image: url('../img/SlideOutInvert_Division.png') !important;
+}
+
+.innerSlideOut.new{
+    background-image: url('../img/SlideOut2.png') !important;
 }
 
 .innerSlideOut p {
@@ -181,11 +185,14 @@ textarea {
     white-space: nowrap;
     text-overflow: ellipsis;
     overflow: hidden;
+    text-shadow: 4px 4px #000;
 }
 
 .innerSlideOut .padding {
-    margin-top: -8px;
+    margin-top: -6px;
     margin-bottom: 6px;
+    color: #ff0000;
+    text-shadow: 2px 2px #000;
 }
 
 
