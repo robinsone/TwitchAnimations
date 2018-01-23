@@ -66,13 +66,13 @@ $(document).ready(function () {
     
     function showpanel() {
         UpdateData();
-        $("#SlideOut").attr('class', 'animated slideOutUp');
+        $("#SlideOut").attr('class', 'animated slideOutDown');
         setTimeout(hidepanel, 60000); //Time betweeen showing it
     }
 
     function hidepanel() {
         UpdateData();
-        $("#SlideOut").attr('class', 'animated slideInDown');
+        $("#SlideOut").attr('class', 'animated slideInUp');
         setTimeout(showpanel, 15000); //Time between showing and hiding
     }
 
